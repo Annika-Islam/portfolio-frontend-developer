@@ -39,7 +39,7 @@ export default function Projects() {
     <section id="projects" className="py-20 sm:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-purple-300 mb-4">Featured Projects</span>
+          <span className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-2xl font-medium text-purple-300 mb-4">Featured Projects</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Things I&apos;ve <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">built</span></h2>
           <p className="mt-5 text-gray-400 text-base sm:text-lg leading-relaxed">A selection of projects showcasing my skills in frontend development, UI design, and performance.</p>
         </motion.div>
