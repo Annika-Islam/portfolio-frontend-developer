@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Github, Linkedin, Twitter, Facebook, Mail, Download, ArrowRight, Code2, Sparkles } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 const socials = [{ icon: Github, href: siteConfig.socials.github, label: "GitHub" }, { icon: Linkedin, href: siteConfig.socials.linkedin, label: "LinkedIn" }, { icon: Twitter, href: siteConfig.socials.twitter, label: "Twitter" }, { icon: Facebook, href: siteConfig.socials.facebook, label: "Facebook" }, { icon: Mail, href: siteConfig.socials.email, label: "Email" }];
@@ -41,7 +42,7 @@ export default function Hero() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-30 blur-2xl animate-pulse-slow" />
               <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="relative h-[min(18rem,82vw)] w-[min(18rem,82vw)] rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-cyan-500/20 via-indigo-500/20 to-purple-500/20 backdrop-blur-md shadow-2xl sm:h-80 sm:w-80">
-                {siteConfig.profileImage ? (<img src={siteConfig.profileImage} alt={siteConfig.name} className="w-full h-full object-cover" />) : (
+                {siteConfig.profileImage ? (<Image src={siteConfig.profileImage} alt={`${siteConfig.name} - Frontend Developer`} fill priority sizes="(max-width: 1024px) 82vw, 320px" className="object-cover" />) : (
                   <div className="w-full h-full flex flex-col items-center justify-center gap-3">
                     <div className="w-28 h-28 rounded-full bg-gradient-to-br from-cyan-400 via-indigo-500 to-purple-500 flex items-center justify-center text-5xl font-extrabold text-white shadow-xl shadow-indigo-500/40">A</div>
                     <div className="flex items-center gap-2 text-gray-300 text-sm"><Sparkles className="w-4 h-4 text-cyan-400" /> Frontend Developer</div>

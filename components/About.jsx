@@ -21,7 +21,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="mx-auto mb-10 max-w-3xl text-center sm:mb-14"
         >
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/15 bg-cyan-300/[0.06] px-3.5 py-1.5 text-xs font-semibold tracking-wide text-cyan-200">
+          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/15 bg-cyan-300/[0.06] px-4 py-2 text-sm font-semibold tracking-wide text-cyan-100 sm:text-base">
             <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" /> About Me
           </span>
           <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">

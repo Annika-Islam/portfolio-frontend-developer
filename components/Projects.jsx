@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
@@ -47,8 +48,7 @@ export default function Projects() {
           {projects.map((project, i) => (
             <motion.article key={project.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, delay: i * 0.1 }} whileHover={{ y: -8 }} className="group flex flex-col rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden hover:border-white/20 transition-all duration-300">
               <div className={`relative h-48 sm:h-52 bg-gradient-to-br ${project.gradient} overflow-hidden`}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={project.screenshot} alt={project.title} className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image src={project.screenshot} alt={`${project.title} project preview`} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
                   <div className={`text-2xl font-extrabold ${accentMap[project.accent]} drop-shadow`}>{project.title.charAt(0)}</div>

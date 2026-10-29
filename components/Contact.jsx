@@ -15,7 +15,7 @@ export default function Contact() {
     <section id="contact" className="py-20 sm:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-cyan-300 mb-4">Contact</span>
+          <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-cyan-200 mb-4 sm:text-base">Contact</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Let&apos;s work <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">together</span></h2>
           <p className="mt-5 text-gray-400 text-base sm:text-lg leading-relaxed">Have a project in mind or just want to say hi? Drop me a message and I&apos;ll get back to you soon.</p>
         </motion.div>
