@@ -23,7 +23,7 @@ export default function Hero() {
                 Available for Work
               </span>
             </motion.div>
-            <motion.h1 variants={item} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight">
+            <motion.h1 variants={item} className="text-[clamp(2.15rem,8vw,3rem)] sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight [overflow-wrap:anywhere]">
               Hi, I&apos;m <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">{siteConfig.name}</span><br />
               <span className="text-gray-200">I build </span><span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">performant web apps</span>.
             </motion.h1>
@@ -32,15 +32,15 @@ export default function Hero() {
               <a href="#projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 text-white font-semibold shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-105 transition-all duration-300">View Projects <ArrowRight className="w-4 h-4" /></a>
               <a href={siteConfig.resumeUrl} className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/15 bg-white/5 text-white font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-md"><Download className="w-4 h-4" /> Download CV</a>
             </motion.div>
-            <motion.div variants={item} className="flex items-center gap-3 pt-2">
-              <span className="text-sm text-gray-500 mr-1">Find me on</span>
-              {socials.map(({ icon: Icon, href, label }) => (<a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 hover:border-cyan-400/40 hover:scale-110 transition-all duration-300"><Icon className="w-4 h-4" /></a>))}
+            <motion.div variants={item} className="flex flex-wrap items-center gap-2 pt-2 sm:gap-3">
+              <span className="mr-1 text-sm text-gray-500">Find me on</span>
+              {socials.map(({ icon: Icon, href, label }) => (<a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="h-9 w-9 shrink-0 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 hover:border-cyan-400/40 hover:scale-110 transition-all duration-300"><Icon className="w-4 h-4" /></a>))}
             </motion.div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} className="relative flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-30 blur-2xl animate-pulse-slow" />
-              <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-cyan-500/20 via-indigo-500/20 to-purple-500/20 backdrop-blur-md shadow-2xl">
+              <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="relative h-[min(18rem,82vw)] w-[min(18rem,82vw)] rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-cyan-500/20 via-indigo-500/20 to-purple-500/20 backdrop-blur-md shadow-2xl sm:h-80 sm:w-80">
                 {siteConfig.profileImage ? (<img src={siteConfig.profileImage} alt={siteConfig.name} className="w-full h-full object-cover" />) : (
                   <div className="w-full h-full flex flex-col items-center justify-center gap-3">
                     <div className="w-28 h-28 rounded-full bg-gradient-to-br from-cyan-400 via-indigo-500 to-purple-500 flex items-center justify-center text-5xl font-extrabold text-white shadow-xl shadow-indigo-500/40">A</div>

@@ -39,7 +39,7 @@ export default function Projects() {
     <section id="projects" className="py-20 sm:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-2xl font-medium text-purple-300 mb-4">Featured Projects</span>
+          <span className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-purple-300 mb-4">Featured Projects</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Things I&apos;ve <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">built</span></h2>
           <p className="mt-5 text-gray-400 text-base sm:text-lg leading-relaxed">A selection of projects showcasing my skills in frontend development, UI design, and performance.</p>
         </motion.div>
@@ -55,8 +55,8 @@ export default function Projects() {
                   <p className="text-[10px] text-gray-200/80 uppercase tracking-widest">Live Preview</p>
                 </div>
               </div>
-              <div className="flex flex-col flex-1 p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{project.title}</h3>
+              <div className="flex flex-col flex-1 p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors [overflow-wrap:anywhere]">{project.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed mb-4 flex-1">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((tag) => (<span key={tag} className="px-2.5 py-1 text-xs font-medium rounded-full bg-white/5 border border-white/10 text-gray-300">{tag}</span>))}

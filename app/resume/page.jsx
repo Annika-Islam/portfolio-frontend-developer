@@ -17,15 +17,15 @@ export default function ResumePage() {
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-white py-10 px-4">
       <div className="max-w-3xl mx-auto">
-        <div className="flex items-center justify-between mb-6 print:hidden">
+        <div className="mb-6 flex flex-col items-stretch gap-3 print:hidden sm:flex-row sm:items-center sm:justify-between">
           <Link href="/" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm">
             <ArrowLeft className="w-4 h-4" /> Back to Portfolio
           </Link>
-          <button onClick={() => typeof window !== "undefined" && window.print()} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 text-white text-sm font-semibold shadow-lg shadow-indigo-500/30 hover:scale-105 transition-all">
+          <button onClick={() => typeof window !== "undefined" && window.print()} className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 text-white text-sm font-semibold shadow-lg shadow-indigo-500/30 hover:scale-105 transition-all sm:justify-start">
             <Printer className="w-4 h-4" /> Print / Save as PDF
           </button>
         </div>
-        <article className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-10 shadow-2xl">
+        <article className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-10 shadow-2xl [overflow-wrap:anywhere]">
           <header className="border-b border-white/10 pb-6 mb-6">
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">{siteConfig.name}</span>
